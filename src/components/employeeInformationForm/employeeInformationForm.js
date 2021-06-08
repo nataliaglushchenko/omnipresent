@@ -81,7 +81,7 @@ function EmployeeInformationForm(props) {
         });
 
         return buildValidationSchema(fieldsToValidate, settings);
-    });
+    }, [fields]);
 
     const myResolver = async (values, context) => {
         const { schema } = context;
