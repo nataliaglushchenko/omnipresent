@@ -34,6 +34,9 @@ const buildValidationSchema = (fieldsToValidate, settings) => {
             .required('Please enter first name'),
         lastName: yup.string()
             .required('Please enter last name'),
+        dateOfBirth: yup.date()
+            .nullable()
+            .typeError('Please enter date of birth'),
         holidayAllowance: yup.number()
             .required('Please enter holiday allowance')
             .min(holidayAllowanceMin, `Minimum ${holidayAllowanceMin}`)
